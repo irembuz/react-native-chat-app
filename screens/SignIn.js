@@ -6,9 +6,8 @@ import { auth } from "../firebaseConfig";
 import { useNavigation } from "@react-navigation/core";
 import SocialButton from "../components/SocialButton";
 import {
-  signInWithEmailAndPassword,
   continueWithGoogle,
-} from "../actions/UserActions";
+} from "../actions/userActions";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
