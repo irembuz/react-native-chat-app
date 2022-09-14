@@ -39,13 +39,15 @@ const Chats = ({ navigation }) => {
   const [chats, setChats] = useState([]);
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
-      firebase
-        .firestore()
-        .collection("chats")
-        .where("users", "array-contains", user.email)
-        .onSnapshot((snapshot) => {
-          setChats(snapshot.docs);
-        });
+      if (user) {
+        firebase
+          .firestore()
+          .collection("chats")
+          .where("users", "array-contains", user.email)
+          .onSnapshot((snapshot) => {
+            setChats(snapshot.docs);
+          });
+      }
     });
   }, []);
 
