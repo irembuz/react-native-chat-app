@@ -10,7 +10,6 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "@powerdesigninc/react-native-prompt": "^0.1.2",
     "@react-native-community/google-signin": "^5.0.0",
     "@react-navigation/bottom-tabs": "^6.2.0",
     "@react-navigation/core": "^6.1.1",
